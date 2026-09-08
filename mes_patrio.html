@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mes Patrio: Septiembre</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #006341;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  nav button {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  nav button.verde {
+    border-color: #006341;
+    color: #006341;
+  }
+
+  nav button.rojo {
+    border-color: #CE1126;
+    color: #CE1126;
+  }
+
+  nav button.activo {
+    color: white;
+  }
+
+  nav button.verde.activo {
+    background-color: #006341;
+  }
+
+  nav button.gris.activo,
+  nav button.gris {
+    border-color: #555;
+    color: #333;
+  }
+
+  nav button.rojo.activo {
+    background-color: #CE1126;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  section {
+    display: none;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  section.activo {
+    display: block;
+  }
+
+  #tiempo {
+    border-color: #006341;
+  }
+
+  #personajes {
+    border-color: #999;
+  }
+
+  #mitos {
+    border-color: #CE1126;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  /* Sección línea de tiempo */
+  .evento {
+    border-left: 4px solid #006341;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+  }
+
+  .evento .fecha {
+    font-weight: bold;
+    color: #006341;
+  }
+
+  .evento h3 {
+    margin: 5px 0;
+  }
+
+  .evento p {
+    margin: 0;
+  }
+
+  /* Sección personajes */
+  .personaje {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .personaje h3 {
+    margin: 0 0 5px 0;
+    color: #006341;
+  }
+
+  .personaje .cargo {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  .personaje p {
+    margin: 0;
+  }
+
+  /* Sección mitos */
+  .dato {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .dato .etiqueta {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    color: white;
+  }
+
+  .dato.verdad .etiqueta {
+    background-color: #006341;
+  }
+
+  .dato.mito .etiqueta {
+    background-color: #CE1126;
+  }
+
+  .dato h3 {
+    margin: 0 0 8px 0;
+  }
+
+  .dato p {
+    margin: 0;
+  }
+
+  footer {
+    text-align: center;
+    background-color: #ddd;
+    padding: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mes Patrio: Septiembre</h1>
+</header>
+
+<nav>
+  <button class="verde activo" onclick="mostrar('tiempo', this)">Línea de tiempo</button>
+  <button class="gris" onclick="mostrar('personajes', this)">Personajes ilustres</button>
+  <button class="rojo" onclick="mostrar('mitos', this)">Datos curiosos y mitos</button>
+</nav>
+
+<main>
+
+  <section id="tiempo" class="activo">
+    <h2>Línea de tiempo</h2>
+
+    <div class="evento">
+      <div class="fecha">8 de septiembre de 1847</div>
+      <h3>Batalla de Molino del Rey</h3>
+      <p>Combate durante la intervención estadounidense en la Ciudad de México.</p>
+    </div>
+
+    <div class="evento">
+      <div class="fecha">13 de septiembre de 1847</div>
+      <h3>Los Niños Héroes</h3>
+      <p>Cadetes del Colegio Militar defienden el Castillo de Chapultepec.</p>
+    </div>
+
+    <div class="evento">
+      <div class="fecha">15 de septiembre de 1810</div>
+      <h3>El Grito de Dolores</h3>
+      <p>Miguel Hidalgo llama al pueblo a levantarse contra el gobierno virreinal.</p>
+    </div>
+
+    <div class="evento">
+      <div class="fecha">16 de septiembre de 1810</div>
+      <h3>Inicio de la Independencia</h3>
+      <p>Se celebra cada año con el Grito y desfiles en todo el país.</p>
+    </div>
+
+    <div class="evento">
+      <div class="fecha">27 de septiembre de 1821</div>
+      <h3>Consumación de la Independencia</h3>
+      <p>El Ejército Trigarante entra a la Ciudad de México, tras once años de guerra.</p>
+    </div>
+  </section>
+
+  <section id="personajes">
+    <h2>Personajes ilustres</h2>
+
+    <div class="personaje">
+      <h3>Miguel Hidalgo y Costilla</h3>
+      <div class="cargo">Cura de Dolores</div>
+      <p>Encabezó el llamado a las armas la madrugada del 16 de septiembre de 1810. Es considerado el padre de la patria.</p>
+    </div>
+
+    <div class="personaje">
+      <h3>Josefa Ortiz de Domínguez</h3>
+      <div class="cargo">La Corregidora</div>
+      <p>Alertó a los insurgentes de que la conspiración había sido descubierta.</p>
+    </div>
+
+    <div class="personaje">
+      <h3>Ignacio Allende</h3>
+      <div class="cargo">Militar insurgente</div>
+      <p>Estratega y jefe militar del movimiento en su primera etapa.</p>
+    </div>
+
+    <div class="personaje">
+      <h3>José María Morelos</h3>
+      <div class="cargo">Líder insurgente</div>
+      <p>Retomó la lucha tras la muerte de Hidalgo y convocó el Congreso de Chilpancingo.</p>
+    </div>
+
+    <div class="personaje">
+      <h3>Vicente Guerrero</h3>
+      <div class="cargo">Insurgente y presidente de México</div>
+      <p>Sostuvo la resistencia en el sur y pactó el Plan de Iguala.</p>
+    </div>
+  </section>
+
+  <section id="mitos">
+    <h2>Datos curiosos y mitos</h2>
+
+    <div class="dato mito">
+      <span class="etiqueta">MITO</span>
+      <h3>¿Hidalgo gritó "Viva México"?</h3>
+      <p>No hay registro exacto de sus palabras. Esa frase se añadió después, en ceremonias del siglo XX.</p>
+    </div>
+
+    <div class="dato verdad">
+      <span class="etiqueta">DATO</span>
+      <h3>La campana de Dolores</h3>
+      <p>Se conserva en el Palacio Nacional y se toca cada 15 de septiembre durante el Grito presidencial.</p>
+    </div>
+
+    <div class="dato mito">
+      <span class="etiqueta">MITO</span>
+      <h3>La independencia se logró el 16 de septiembre</h3>
+      <p>Ese día inició la guerra, no terminó. La independencia se consumó hasta 1821.</p>
+    </div>
+
+    <div class="dato verdad">
+      <span class="etiqueta">DATO</span>
+      <h3>Los colores de la bandera</h3>
+      <p>Verde, blanco y rojo vienen del Ejército Trigarante de 1821.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  Mes Patrio · Septiembre — Sitio informativo con fines educativos.
+</footer>
+
+<script>
+  function mostrar(id, boton) {
+    document.querySelectorAll('section').forEach(function(s) {
+      s.classList.remove('activo');
+    });
+    document.getElementById(id).classList.add('activo');
+
+    document.querySelectorAll('nav button').forEach(function(b) {
+      b.classList.remove('activo');
+    });
+    boton.classList.add('activo');
+  }
+</script>
+
+</body>
+</html>
