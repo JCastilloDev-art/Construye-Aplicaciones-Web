@@ -1,0 +1,27 @@
+<!-- ============================================================
+     11. FORMULARIO CON LIMITACIONES
+     ============================================================ -->
+<h2>Formulario con limitaciones</h2>
+<form action="" method="post">
+Ingresa tu nombre:
+<!-- Desahbilitacion de campo -->
+<input type="text" name="nombre" disabled><br>
+<!-- disabled: el campo queda bloqueado (se ve en gris). El usuario no puede escribir en el
+     y su valor NO se envia al servidor -->
+<!-- Limitacion de caracteres -->
+Contraseña:
+<input type="password" name="pass" maxlength="5"><br>
+<!-- maxlength="5": limita el numero maximo de caracteres que se pueden escribir (maximo 5) -->
+<!-- Solo lectura -->
+Comentarios:
+<textarea name="comentarios" readonly>
+Este es mi comentario y no se puede borrar
+</textarea><br>
+<!-- readonly: el contenido se puede ver y se envia al servidor, pero el usuario no lo puede modificar.
+     La diferencia con disabled es que readonly SI se envia.
+     El texto escrito entre <textarea> y </textarea> es el contenido inicial de la caja -->
+</form>
+</body>
+<!-- </body>: fin del contenido visible -->
+</html>
+<!-- </html>: fin del documento -->
