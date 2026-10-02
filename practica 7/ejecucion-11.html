@@ -1,0 +1,16 @@
+<!-- ============================================================
+     9. FORMULARIO CON CAMPOS OCULTOS
+     ============================================================ -->
+<h2>Formulario con campos ocultos</h2>
+<form action="" method="post">
+<input type="hidden" name="hora" value="3:30">
+<!-- type="hidden": campo que NO se ve en pantalla, pero se envia al servidor junto con los demas.
+     Sirve para mandar datos que el usuario no debe escribir (identificadores, fechas, horas, etc.).
+     name="hora": nombre del dato.
+     value="3:30": valor fijo que se enviara -->
+Ingresa tu nombre:
+<input type="text" name="nombre">
+<br>
+<button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i> </button>
+<button type="reset">Borrar <i class="fa fa-trash"></i></button>
+</form>
