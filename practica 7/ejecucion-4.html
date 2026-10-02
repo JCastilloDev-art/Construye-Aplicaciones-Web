@@ -1,0 +1,25 @@
+<!-- ============================================================
+     3. FORMULARIO CON TEXT AREA
+     ============================================================ -->
+<h2>Formulario con text area</h2>
+<form action="" method="post">
+Ingresa tu nombre:
+<input type="text" name="nombre">
+<br>
+Ingresa tu correo:
+<input type="email" name="correo">
+<!-- type="email": campo para correos electronicos. El navegador valida automaticamente
+     que el texto tenga formato correcto (con @ y dominio) antes de enviar -->
+<br>
+Ingresa tus comentarios:
+<textarea name="comentarios" rows="1" cols="10"></textarea>
+<!-- <textarea>: caja de texto de VARIAS lineas, util para comentarios o mensajes largos.
+     Si lleva etiqueta de cierre, a diferencia de input.
+     name="comentarios": nombre con el que se envia el contenido.
+     rows="1": numero de filas (alto) visibles.
+     cols="10": numero de columnas (ancho) visibles, medido en caracteres.
+     El usuario puede cambiar su tamaño arrastrando la esquina inferior derecha -->
+<br>
+<input type="submit" value="enviar">
+<input type="reset" value="borrar">
+</form>
