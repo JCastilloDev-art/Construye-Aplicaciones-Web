@@ -1,0 +1,26 @@
+<!-- ============================================================
+     1. EJEMPLO BASICO
+     ============================================================ -->
+<h2>Ejemplo basico</h2>
+<!-- <h2>: subtitulo de seccion -->
+<form action="" method="post">
+<!-- <form>: etiqueta contenedora; todo campo que este dentro forma parte del mismo formulario.
+     action="": direccion (URL) del archivo del servidor que recibira los datos.
+                Vacio significa que se envian a la misma pagina.
+     method="post": forma de envio. POST manda los datos ocultos dentro de la peticion
+                (se usa para informacion privada o larga). La otra opcion es GET, que
+                los muestra en la URL -->
+Ingresa tu nombre:
+<!-- Texto simple que sirve de etiqueta para que el usuario sepa que debe escribir -->
+<input type="text" name="nombre" size="20">
+<!-- <input>: campo de entrada de datos (no lleva etiqueta de cierre).
+     type="text": caja de texto de una sola linea.
+     name="nombre": identificador del campo; el servidor usa este nombre para recibir el dato.
+     size="20": ancho visible de la caja, equivale a 20 caracteres -->
+<br>
+<!-- Salto de linea: coloca el boton debajo de la caja de texto -->
+<input type="submit" value="enviar">
+<!-- type="submit": boton que envia el formulario al servidor.
+     value="enviar": texto que se muestra dentro del boton -->
+</form>
+<!-- </form>: cierre del formulario -->
