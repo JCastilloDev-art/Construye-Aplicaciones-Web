@@ -1,0 +1,31 @@
+<!-- ============================================================
+     6. FORMULARIOS CON SELECCION
+     ============================================================ -->
+<h2>Formularios con seleccion</h2>
+<form action="" method="post">
+Ingresa tu nombre:
+<input type="text" name="nombre">
+<br>
+Selecciona tu pais:
+<select name="pais">
+<!-- <select>: lista desplegable; el usuario elige UNA opcion de la lista.
+     name="pais": nombre con el que se envia la opcion elegida -->
+<option value="1">Argentina</option>
+<!-- <option>: cada elemento de la lista.
+     value="1": dato que se envia al servidor.
+     El texto entre las etiquetas ("Argentina") es lo que ve el usuario.
+     La primera opcion aparece seleccionada por defecto -->
+<option value="2">España</option>
+<option value="3">Mexico</option>
+<option value="4">Guatemala</option>
+<option value="5">Honduras</option>
+<option value="6">El Salvador</option>
+<option value="7">Venezuela</option>
+<option value="8">Colombia</option>
+<!-- Cada pais tiene un value distinto para que el servidor sepa cual se eligio -->
+</select>
+<!-- Cierre de la lista desplegable -->
+<br>
+<input type="submit" value="enviar">
+<input type="reset" value="borrar">
+</form>
