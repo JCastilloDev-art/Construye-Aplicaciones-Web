@@ -1,0 +1,23 @@
+<!-- ============================================================
+     5. FORMULARIOS CON RADIOBOTON
+     ============================================================ -->
+<h2>Formularios con Radioboton</h2>
+<form action="" method="post">
+Ingresa tu nombre:
+<input type="text" name="nombre">
+<br>
+Selecciona el maximo de estudios que tienes:
+<br>
+<input type="radio" name="estudios" value="1">Sin estudios <br>
+<!-- type="radio": boton de opcion; permite elegir SOLO UNA opcion de un grupo.
+     name="estudios": todos los radios con el mismo name forman un grupo, y al elegir uno
+                      se desmarca el anterior.
+     value="1": valor que recibe el servidor si esta opcion es la elegida
+                (el texto "Sin estudios" es solo lo que ve el usuario) -->
+<input type="radio" name="estudios" value="2">Primaria <br>
+<input type="radio" name="estudios" value="3">Secundaria <br>
+<input type="radio" name="estudios" value="4">Preparatoria <br>
+<!-- Mismo name="estudios" con diferente value: pertenecen al mismo grupo -->
+<input type="submit" value="enviar">
+<input type="reset" value="borrar">
+</form>
