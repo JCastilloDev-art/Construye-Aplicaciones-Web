@@ -1,0 +1,37 @@
+<!-- ============================================================
+     10. FORMULARIOS CON AGRUPAMIENTO
+     ============================================================ -->
+<h2>Formularios con agrupamiento</h2>
+<form action="" method="post">
+<fieldset>
+<!-- <fieldset>: agrupa campos relacionados dentro de un recuadro con borde,
+     para que el formulario sea mas claro y ordenado -->
+<legend>Datos personales</legend>
+<!-- <legend>: titulo del grupo; aparece sobre el borde del recuadro -->
+Nombre y apellido:
+<input type="text" name="nombre_apellido"><br>
+<!-- Caja de texto para el nombre completo -->
+Documento valido:
+<input type="file" name="documento"><br>
+<!-- Campo para adjuntar el documento de identidad -->
+Fecha de nacimiento:
+<input type="date" name="fecha_nacimiento">
+<!-- type="date": selector de fecha con calendario; el navegador valida que sea una fecha real -->
+</fieldset>
+<!-- Fin del primer grupo -->
+<fieldset>
+<legend>Datos de estudio:</legend>
+<!-- Segundo grupo, con sus propios campos -->
+Nombre de la escuela:
+<input type="text" name="escuela"><br>
+Certificado valido:
+<input type="file" name="certificado"><br>
+Fecha de egreso:
+<input type="date" name="fecha_egreso">
+<!-- Texto, archivo y fecha, igual que en el grupo anterior pero con datos escolares -->
+</fieldset>
+<br>
+<button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i> </button>
+<button type="reset">Borrar <i class="fa fa-trash"></i></button>
+<!-- Un solo par de botones fuera de los grupos: envian todos los campos de ambos fieldset -->
+</form>
