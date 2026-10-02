@@ -1,0 +1,18 @@
+<!-- ============================================================
+     8. FORMULARIO CON ARCHIVOS
+     ============================================================ -->
+<h2>Formulario con archivos</h2>
+<form action="" method="post">
+Ingresa tu nombre:
+<input type="text" name="nombre">
+<br>
+<input type="file" name="archivo">
+<!-- type="file": muestra el boton "Elegir archivo" para seleccionar un archivo de la computadora.
+     name="archivo": nombre con el que se envia.
+     Nota: para que el archivo realmente llegue al servidor, el <form> debe llevar
+     enctype="multipart/form-data"; aqui solo se muestra el campo -->
+<br>
+<button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i> </button>
+<button type="reset">Borrar <i class="fa fa-trash"></i></button>
+<!-- Botones de enviar y borrar, con sus iconos -->
+</form>
