@@ -1,0 +1,21 @@
+<!-- ============================================================
+     2. FORMULARIO PARA CONTRASEÑAS
+     ============================================================ -->
+<h2>Formulario para contraseñas</h2>
+<form action="" method="post">
+<!-- Abre un formulario nuevo, independiente del anterior -->
+Ingresa tu usuario:
+<input type="text" name="usuario">
+<!-- Caja de texto normal; name="usuario" es el nombre con el que se envia el dato.
+     Al no tener size, usa el ancho predeterminado del navegador -->
+Ingresa tu contraseña:
+<input type="password" name="pass">
+<!-- type="password": igual que text, pero oculta lo que se escribe (puntos o asteriscos)
+     para que nadie lo lea en pantalla. No cifra el dato, solo lo oculta visualmente -->
+<br>
+<input type="submit" value="enviar">
+<!-- Boton para enviar los datos -->
+<input type="reset" value="borrar">
+<!-- type="reset": boton que limpia todos los campos del formulario y los regresa
+     a su valor inicial. No envia nada al servidor -->
+</form>
